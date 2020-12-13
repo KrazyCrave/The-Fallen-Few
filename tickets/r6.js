@@ -40,11 +40,6 @@ module.exports = {
                 return;
             }
             
-            let gap = await message.guild.channels.find(channel => channel.name==="r6-ticket")
-                    if (gap==true){
-                        await message.channel.send('This is a test')
-                    }
-
         });
 
     }
