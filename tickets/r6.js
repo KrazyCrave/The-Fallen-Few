@@ -33,6 +33,11 @@ module.exports = {
                         const categoryId = '787553684010958849'
                         channel.setParent(categoryId)
                     })
+
+                    let gap = await message.guild.channels.find(channel => channel.name==="R6 Ticket")
+                    if (gap==true){
+                        await message.channel.send('This is a test')
+                    }
                 }
             } else {
                 return;
