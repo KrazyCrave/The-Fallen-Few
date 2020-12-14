@@ -1,7 +1,7 @@
 const { MessageEmbed, GuildAuditLogs, GuildChannel } = require("discord.js");
 
 module.exports = {
-    name: 'r6',
+    name: 'rl',
     description: "Sets up a reaction role message!",
     async execute(message, args, Discord, client) {
         const channel = '776276599514857533';
@@ -13,8 +13,8 @@ module.exports = {
  
         let embed = new Discord.MessageEmbed()
             .setColor('#e42643')
-            .setTitle('TFF|R6 Nova')
-            .setDescription('Nova is the Xbox Rainbow 6 Siege Team for TFF!\n\n'
+            .setTitle('TFF|RL Tempest')
+            .setDescription('Tempest is a team that is currently c3-gcs, and we are a meme-team. We dont take things too seriously but we know how to when it is needed!\n\n'
                 + `Press the ${yellowTeamEmoji} to apply for a team!`);
  
         let messageEmbed = await message.channel.send(embed);
@@ -27,19 +27,22 @@ module.exports = {
             if (!reaction.message.guild) return;
 
             let memberTarget = reaction.message.guild.members.cache.get(user.id);
-            let r6 = new Discord.MessageEmbed()
+            let rl = new Discord.MessageEmbed()
             .setColor('#e42643')
             .setTitle('Here is your ticket!')
             .setDescription('Please fill out the following questions!\n\n'
-                + `What is your age?\n`
-                + `What is your rank?\n`
-                + `When are you available?\n`
-                + `Who is the best staff?\n`);
+                + `What is your playtime? (hours)\n`
+                + `What rank are you currently?\n`
+                + `What is your peak? (rank and mmr)\n`
+                + `What is your preferred playlist(s)?\n`
+                + `Have you been on a team before?\n`
+                + `What makes you think you would be a good addition to the team?\n`
+                + `Why do you wanna join a team?\n`);
             
  
             if (reaction.message.channel.id == channel) {
                 if (reaction.emoji.name === yellowTeamEmoji) {
-                    await reaction.message.guild.members.cache.get(user.id).guild.channels.create('R6 Ticket', {
+                    await reaction.message.guild.members.cache.get(user.id).guild.channels.create('RL Ticket', {
                         type: 'text',
                     }).then((channel) => {
                         console.log(channel)
@@ -48,7 +51,7 @@ module.exports = {
                     }) 
     
                 };
-                await message.guild.channels.cache.find(i => i.name === 'r6-ticket').send(`<@${memberTarget.user.id}>`, r6)
+                await message.guild.channels.cache.find(i => i.name === 'rl-ticket').send(`<@${memberTarget.user.id}>`, rl)
             } else {
                 return;
             }
@@ -58,9 +61,3 @@ module.exports = {
 
     }
 }   
-
-
-//.then(message.channel.send('This is a test!'))
-//await message.guild.channels.cache.get(bob.name).message.channel.send(gap)
-//await message.guild.channels.find(channel => channel.name == "r6-ticket").message.guilds.channels.send('This is a test!')
-

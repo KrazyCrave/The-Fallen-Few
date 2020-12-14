@@ -118,6 +118,8 @@ client.on('message', message =>{
         client.admin.get('warn').execute(message, args);
     } else if (command === 'r6'){
         client.tickets.get('r6').execute(message, args, Discord, client);
+    } else if (command === 'rl'){
+        client.tickets.get('rl').execute(message, args, Discord, client);
     }
 });
 
