@@ -4,7 +4,7 @@ module.exports = {
     name: 'rl',
     description: "Sets up a reaction role message!",
     async execute(message, args, Discord, client) {
-        const channel = '776276599514857533';
+        const channel = '788129364876722186';
       
  
         const yellowTeamEmoji = '📝';
@@ -46,7 +46,7 @@ module.exports = {
                         type: 'text',
                     }).then((channel) => {
                         console.log(channel)
-                        const categoryId = '787553684010958849'
+                        const categoryId = '788129792587333663'
                         channel.setParent(categoryId)
                     }) 
     

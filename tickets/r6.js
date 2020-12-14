@@ -4,7 +4,7 @@ module.exports = {
     name: 'r6',
     description: "Sets up a reaction role message!",
     async execute(message, args, Discord, client) {
-        const channel = '776276599514857533';
+        const channel = '788129364876722186';
       
  
         const yellowTeamEmoji = '📝';
