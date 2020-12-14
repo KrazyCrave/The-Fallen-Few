@@ -31,10 +31,12 @@ module.exports = {
             .setColor('#e42643')
             .setTitle('Here is your ticket!')
             .setDescription('Please fill out the following questions!\n\n'
-                + `What is your age?\n`
-                + `What is your rank?\n`
-                + `When are you available?\n`
-                + `Who is the best staff?\n`);
+                + `What is your gamertag:\n`
+                + `How long have you been playing competitive:\n`
+                + `Your rank this season and last season:\n`
+                + `KD This season and last Season:\n`
+                + `Timezone:\n`
+                + `Why chose you?:\n`);
             
  
             if (reaction.message.channel.id == channel) {
