@@ -19,6 +19,7 @@ client.socialmedia = new Discord.Collection();
 client.admin = new Discord.Collection();
 client.reactions = new Discord.Collection();
 client.tickets = new Discord.Collection();
+client.music = new Discord.Collection();
  
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
@@ -64,6 +65,14 @@ for(const file of ticketsFiles){
     const tickets = require(`./tickets/${file}`);
 
     client.tickets.set(tickets.name, tickets);
+
+}
+
+const musicFiles = fs.readdirSync('./music/').filter(file => file.endsWith('.js'))
+for(const file of musicFiles){
+    const music = require(`./music/${file}`);
+
+    client.music.set(music.name, music);
 
 }
  
@@ -120,8 +129,17 @@ client.on('message', message =>{
         client.tickets.get('r6').execute(message, args, Discord, client);
     } else if (command === 'rl'){
         client.tickets.get('rl').execute(message, args, Discord, client);
+    } else if (command === 'staff'){
+        client.tickets.get('staff').execute(message, args, Discord, client);
+    } else if (command === 'welcome'){
+        client.reactions.get('welcome').execute(message, args, Discord, client);
+    } else if (command === 'play'){
+        client.music.get('play').execute(message, args);
+    } else if (command === 'leave'){
+        client.music.get('leave').execute(message, args);
     }
 });
+
 
 client.on("message", async message => {
 

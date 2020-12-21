@@ -1,4 +1,4 @@
-const { MessageEmbed, GuildAuditLogs, GuildChannel } = require("discord.js");
+
 
 module.exports = {
     name: 'rl',
@@ -7,7 +7,7 @@ module.exports = {
         const channel = '788129364876722186';
       
  
-        const yellowTeamEmoji = '📝';
+        const jellowEmoji = '📝';
         
         
  
@@ -15,10 +15,10 @@ module.exports = {
             .setColor('#e42643')
             .setTitle('TFF|RL Tempest')
             .setDescription('Tempest is a team that is currently c3-gcs, and we are a meme-team. We dont take things too seriously but we know how to when it is needed!\n\n'
-                + `Press the ${yellowTeamEmoji} to apply for a team!`);
+                + `Press the ${jellowEmoji} to apply for a team!`);
  
         let messageEmbed = await message.channel.send(embed);
-        messageEmbed.react(yellowTeamEmoji);
+        messageEmbed.react(jellowEmoji);
  
         client.on('messageReactionAdd', async (reaction, user) => {
             if (reaction.message.partial) await reaction.message.fetch();
@@ -41,8 +41,8 @@ module.exports = {
             
  
             if (reaction.message.channel.id == channel) {
-                if (reaction.emoji.name === yellowTeamEmoji) {
-                    await reaction.message.guild.members.cache.get(user.id).guild.channels.create('RL Ticket', {
+                if (reaction.emoji.name === jellowEmoji) {
+                    await reaction.message.guild.members.cache.get(user.id).guild.channels.create('ticket', {
                         type: 'text',
                     }).then((channel) => {
                         console.log(channel)
@@ -51,7 +51,7 @@ module.exports = {
                     }) 
     
                 };
-                await message.guild.channels.cache.find(i => i.name === 'rl-ticket').send(`<@${memberTarget.user.id}>`, rl)
+                await message.guild.channels.cache.find(i => i.name === 'rl-ticket').send(`<@${memberTarget.user.id}>`,rl)
             } else {
                 return;
             }
