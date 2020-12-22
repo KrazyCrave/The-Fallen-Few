@@ -137,6 +137,10 @@ client.on('message', message =>{
         client.music.get('play').execute(message, args);
     } else if (command === 'leave'){
         client.music.get('leave').execute(message, args);
+    } else if (command === 'blackjack'){
+        client.commands.get('blackjack').execute(message, args, Discord, client);
+    } else if(command === 'merch'){
+        client.socialmedia.get('merch').execute(message, args);
     }
 });
 
@@ -179,6 +183,13 @@ client.on("message", async message => {
         if(!client.tickets.has(command));
             try {
             client.tickets.get(command).run(client, message, args);
+        } catch (error){
+            console.error(error);
+        }
+
+        if(!client.commands.has(command));
+            try {
+            client.commands.get(command).run(client, message, args);
         } catch (error){
             console.error(error);
         }

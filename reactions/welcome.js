@@ -11,9 +11,9 @@ module.exports = {
  
         let embed = new Discord.MessageEmbed()
             .setColor('#e42643')
-            .setTitle('Finished reading the rules?')
-            .setDescription('Once you finish reading the rules!\n\n'
-                + `${yellowTeamEmoji} if you agree with the rules`);
+            .setTitle('Finished role assign?')
+            .setDescription('\n\n'
+                + `Click ${yellowTeamEmoji} to show you are finished with role assign`);
     
  
         let messageEmbed = await message.channel.send(embed);

@@ -12,6 +12,7 @@ module.exports = {
 
                 if (!args[1]) {
                     message.channel.send(`<@${memberTarget.user.id}> has been warned`);
+                    memberTarget.send('You have failed to follow one of the rules so you have recieved a warning')
                     return
                 }
         }}
