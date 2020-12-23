@@ -2,7 +2,7 @@ module.exports = {
     name: 'games',
     description: "Sets up a reaction role message!",
     async execute(message, args, Discord, client) {
-        const channel = '776276599514857533';
+        const channel = '759208970328997919';
         const yellowTeamRole = message.guild.roles.cache.find(role => role.name === "Call of Duty");
         const blueTeamRole = message.guild.roles.cache.find(role => role.name === "CoD Zombies");
         const r6TeamRole = message.guild.roles.cache.find(role => role.name === "Rainbow 6 Siege");

@@ -2,7 +2,7 @@ module.exports = {
     name: 'welcome',
     description: "Sets up a reaction role message!",
     async execute(message, args, Discord, client) {
-        const channel = '788544786445238295';
+        const channel = '759208970328997919';
         const yellowTeamRole = message.guild.roles.cache.find(role => role.name === "Fans");
 
  
