@@ -1,0 +1,24 @@
+client.on('message', message=>{
+
+    const args = message.content.slice().split(/ +/);
+    const messageCensor = args.shift().toLowerCase();;
+
+    
+
+    if(messageCensor === 'fuck'){
+        message.channel.messages.delete(message);
+         message.channel.send('Thats a no no word');
+    } else if(messageCensor === 'shit'){
+        message.channel.messages.delete(message);
+         message.channel.send('Thats a no no word');
+    } else if(messageCensor === 'fucked'){
+        message.channel.messages.delete(message);
+         message.channel.send('Thats a no no word');
+    } else if(messageCensor === 'shitter'){
+        message.channel.messages.delete(message);
+         message.channel.send('Thats a no no word');
+    } 
+    
+})
+
+//put in main.js
