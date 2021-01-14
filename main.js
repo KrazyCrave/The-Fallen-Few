@@ -142,6 +142,16 @@ client.on('message', message =>{
         client.commands.get('blackjack').execute(message, args, Discord, client);
     } else if(command === 'merch'){
         client.socialmedia.get('merch').execute(message, args);
+    } else if(command === 'urban'){
+        client.commands.get('urban').execute(message, args);
+    } else if(command === 'canada'){
+        client.commands.get('canada').execute(message, args);
+    } else if(command === 'crave'){
+        client.commands.get('crave').execute(message, args);
+    } else if(command === 'enaty'){
+        client.commands.get('enaty').execute(message, args);
+    } else if(command === 'demise'){
+        client.commands.get('demise').execute(message, args);
     }
 });
 
