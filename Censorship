@@ -5,19 +5,22 @@ client.on('message', message=>{
 
     
 
-    if(messageCensor === 'fuck'){
-        message.channel.messages.delete(message);
-         message.channel.send('Thats a no no word');
-    } else if(messageCensor === 'shit'){
-        message.channel.messages.delete(message);
-         message.channel.send('Thats a no no word');
-    } else if(messageCensor === 'fucked'){
-        message.channel.messages.delete(message);
-         message.channel.send('Thats a no no word');
-    } else if(messageCensor === 'shitter'){
-        message.channel.messages.delete(message);
-         message.channel.send('Thats a no no word');
-    } 
+    if(messageCensor === 'urban'){
+      
+         message.channel.send('You mean a fucking bitch');
+    } else if(messageCensor === 'canada'){
+        message.channel.send('What a fucking Boomer')
+    } else if(messageCensor === 'demise'){
+        message.channel.send('Who?')
+    } else if(messageCensor === "Can I join the clan?"){
+        message.channel.send('For what game?')
+    } else if(messageCensor === 'fortnite'){
+        message.channel.send('Message Hades')
+    } else if(messageCensor === 'plague'){
+        message.channel.send('No <3')
+    } else if(messageCensor === 'cynical'){
+        message.channel.send('Fuck off')
+    }
     
 })
 

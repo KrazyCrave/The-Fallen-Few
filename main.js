@@ -11,6 +11,7 @@ const fs = require('fs');
 const { token, default_prefix } = require('./config.json');
 
 const config = require('./config.json');
+const { send } = require("process");
 
 
 client.commands = new Discord.Collection();
@@ -152,8 +153,10 @@ client.on('message', message =>{
         client.commands.get('enaty').execute(message, args);
     } else if(command === 'demise'){
         client.commands.get('demise').execute(message, args);
-    }
+    } 
 });
+
+
 
 
 client.on("message", async message => {
@@ -209,10 +212,17 @@ client.on("message", async message => {
 
 })
 
-
-
-
-
+client.on("message", (message) => {
+   
+    const responseObject = {
+        "Can I join the clan?": "For what game?",
+        "fortnite": "Message Hades",
+      };
+   
+    if(responseObject[message.content]) {
+      message.channel.send(responseObject[message.content]);
+    }
+  });
 
  
 client.login(config.token);
